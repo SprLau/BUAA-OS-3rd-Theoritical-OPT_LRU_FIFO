@@ -22,9 +22,9 @@ def show_axis():
 
 def show_graph(opt_faults, lru_faults, fifo_faults):
     show_axis()
-    ln1, = plt.plot(x, opt_faults, color='cornflowerblue', marker='o', markersize='3')
-    ln2, = plt.plot(x, lru_faults, color='gold', marker='^', markersize='3')
-    ln3, = plt.plot(x, fifo_faults, color='firebrick', marker='D', markersize='3')
+    ln1, = plt.plot(x, opt_faults, color='indigo', marker='o', markersize='3')
+    ln2, = plt.plot(x, lru_faults, color='red', marker='^', markersize='3')
+    ln3, = plt.plot(x, fifo_faults, color='grey', marker='D', markersize='3')
     plt.legend([ln1, ln2, ln3], ['OPT', 'LRU', 'FIFO'])
     for i in range(10):
         plt.text(i + 1, opt_faults[i] + 1, str(opt_faults[i]), ha='center', va='bottom', fontsize='8')
